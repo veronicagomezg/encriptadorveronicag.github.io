@@ -52,7 +52,7 @@ body {
     background-image: url("/Imagenes/overlay.png"), -moz-linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
 }
 
-main{
+main {
     display: flex;
     margin-bottom: 30px;
     margin-left: 10px;
@@ -79,6 +79,7 @@ main{
 .mensaje-caja {
     display: flex;
 }
+
 .mensaje {
     background: white;
     background-image: url(/Imagenes/au.svg);
