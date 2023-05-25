@@ -93,6 +93,7 @@ main {
     margin-left: 100px;
     font: "Inter";
 }
+
 .mensaje:focus {
     outline: none;
 }
