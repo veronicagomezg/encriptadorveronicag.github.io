@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <link rel="stylesheet" href="/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400&display=swap" rel="stylesheet">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <title>Encriptador de texto - Alura Challenges ONE</title>
+    </head>
+
+    <body class="encriptadorAlura">
+
+        <header>
+            <img class="logo" src="Imagenes/Neurodiversity_Symbol.svg">
+            <div class="container">
+                <div class="row">
+                  <div class="col-md-12 text-center">
+                    <h1 class="animate-charcter"> Encriptador de texto <br>Alura Challenge ONE</h1>
+                  </div>
+                </div>
+              </div>
+        </header>
+
+    <main>
+        <section class="introducir">
+            <textarea class="text-area" cols="30" rows="10" placeholder="Ingrese el texto aqui"></textarea>
+            <textarea class="mensaje"></textarea>
+            <div class="botones">
+                <button class="btn-encriptar" onclick="btnEncriptar()">Encriptar</button>
+                <button class="btn-desencriptar" onclick="btnDesencriptar()">Desencriptar</button>
+                <button class="btn-copiar">Copiar</button>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+            <div class="laboral">
+            <p>
+            ©Verónica Gómez González - Alura Grupo 5 - 2023
+        </p>
+            <a href="https://github.com/veronicagomezg" target="_blank">
+                <img class="redes" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAA4BJREFUaEPtmY+RjEEQxd9FgAgQASJABIgAESACRIAIuAgQASJABIgAEVC/qhk1O9PT09/s7Kmr2q7aut39dnr69Z/XPXMnOudycs7t1xHA/47gyghcl3RT0i1JVyTxuZQvkn5J+phen1aA3xfARUmPJD1IRm+x6bukd5JeSeL9lMwCwPCnkh5P7doueiPpSYrQJpUzAO5Kei0JECuF9AIEYMKyFcCLhV7vGQmAh1EEWwDgdXL9LIRCvxdJqSiAszQ+OwgQt0feigB4lgp2pOsQz4fpNAIAp38wLDtNxcZz0urypPW/kx7oFHKAkmuhHrqF7QGAZT53+J3QEuIsgHgp6UL64quRv+i7lp5jOJFlTRaa3zcDAOx0tVcPHgAvdax1GEj3LYFZgSFquSvXz/90IknETQLpAcAYvNHj+lHqTWaUegDQRxSajt0zhA4L5/fkUoTiJlB4ABg5ms7fA0Du18NYaU9dAxO2NkvYj317gveJwo5YAHrFlBe+T4yxwuhaB0VtMVH+XeM4CwDFQuPqiZmLi9BQc3g6s1mt9nlir3/fWwA8LxzS+9koOP9+xyHN/hYAaJCDiSWNBxZ5vlRDQ3vb0Qv93iifbQXAgEXXPKT0un/ec8dmCwD8TyFb4rb1Raj2BkCYcssfFtEio6MpxO+GEfBqwGwmi0F4I8yPOju21kBTRIuNRx01dqejl5sMUmyaRll46D7w03FKiEY9GkN3dzJcEI3R4YlDfzmCm1eLdEPPC9h5qFmIw5N320EPII3dFOKhV8g855BBTxjN/tGgkNc0L8/4poAbSip2q+chFmN0Ta+0fbrz7M0a/YYLsshtR5M+HoDs5TxUwQx4HA/xvh41CCvR4C+FBlhLWA/DMDrjdW9kL9dzBAVso9c7WdWHGozL1xwYazU7zsIjo0bpaQHvzmCjo2HdlTMD5bNvPfZGRo0Ry9UASF/2M6M6AmCdknIf4Bm0Ryrka3M+R+rBOzrWAFzGGwFAWV3QuR6iDGP9LgrALNwIjdab1occPqN8ViIAQg0zEoFsZA2CVOG73FhgCTaNyAhAyPgRjVqGjM7LUYd4AIZpM5NC5RqKlwZm0eg+AGAbHLSpu0c3tKJBn+BVXuxG9ZURoEmRijDYZolu6CnGa3kU2JnVnUV4ma6M4Zv+pVTrXAFgs9dWLjgCWOnNGV3HCMx4beWav4uArjFD7/JYAAAAAElFTkSuQmCC"/></a>
+                <a href="https://www.linkedin.com/in/veronicaygomezg" target="_blank">
+                <img class="redes" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAeRJREFUaEPtmLsuRUEUhr/zBLQSCToShUaNN8ALuDUShUtxlGgpXCLRuDwCngANLVGoJBQSJS+ALJmTTMaeWXsnJ3vmxEwjObPmzP+vf61/zdGgw1ejw/GTCcRW8F8oMACMAl/AHfAWO+v2/ZoCh8CSA3gHaKZCIkTgCFj0AN0G1lMg4SMwCDwpAHuA99gkfATmgFMF3BRwkSqBeeBEATcNnKdKYBh4VMD1puBIoSYWBUSJorULrMXOvtyv2egxsOAAPQCWUwBfhoDEDJlB9g3cAs+pgC9LICW8f7BoJZQ0eE2BEaDLw+ATuHf2+oG+kvESOwOMA93Ahzknf2W2XFqfBZMYUuAaGPOcvjGX29ubwIYSL2DPgElFWiEi37evlUCdBGaBK0CyX3YJgZVQcJ0EpBylLKuu4JOlLgJVQdvxL4D8JilcnUBAgE8A0pOVbLSdTexe/GBcJuRc9pkt09TRCQhwcSApi9YSKxXr9Fm2xBW53u/5Okvo1TRxy/PtbAoJcSjfSoLAKrAXACmq+AahN9l1KuBtREMq1HNJENDeXaFJngm4pVv1LaQZhuxnBdwst3uQ5R6I/ZTICmQFrAxkGy0ohzwH8hwI/FslylMi8HRPZ0sbLukg9SDJBGJLlBWIrcAPVkCPMQi99zgAAAAASUVORK5CYII="/></a>
+            
+            <div class="autismo">
+            <p>Información sobre autismo en primera persona</p> 
+                <a href="https://www.instagram.com/mujerenelespectro" target="_blank">
+                <img class="redes" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAA1JJREFUaEPtmb+uT0EQx7/3CRAPwH0ClCrUCrQiQS9BNKrr3ih0/sQDoJDo8AToNIInQEN5SfTkIzsy1tl/5x8nOZuc3HtydmfnO/Od2Zn9bWjhY2Ph+msF8K89uHpgiR44KOmYpNOS9krinafP+CiJ56ukZ5JehfdqWS0UQtkbkq5US+838a6knQCqKKEWANa+M8DSRUWiCXjkYvBKdm0NAJR/Gkn5FITj/net2kXzD0viOS7pQPTtTAlECQC0eess/y1w/+VApVPLtwNN7Tue2MzRqQQAPl4O0lCeYEXolANvYDQb93JxlwOAsh+coBOSxrb8fkkXJJ2U9CYE73dJsSfwAnT9a+QAkG0IXMb7wNOxLX9J0n0n9Laka+EdT+8J/1+VBBuaAJCXT4UVWTdmUEEHRirQb0m67ta/lnQ0vPv9n4fYawIAXTiwGMVsEOYR9MQMGYXHD+TxYAyLo7OSHrtJW5JuhndPIw64WN6vaTkKwX87YWv4zwYPKs4KuEyOt3g6J+mQpM+Snkj6EgB4CrOGOGjywA83uwQgDroMq35/4rRlXWpgkBfuY6excx6oBRBvxJ6PJD103CcWyDbnI21zhhkVwJFEILYedChFcFp2gRrI7jpbRgWQ8lRMnRLVcECsWIpKswDwmQraQJOaAb2MTqkMMwuA2jiJQdUoVzMnm0a9cl0UimuWfQ11ErGz61B1lQorgJIHMOCiKQSAxQRxKj0uJo2mABCMVJrWCnIgUfil+gYCk/aUdQxaU5LB5AdZy5GPYuR5HvoIBsUaZ0R8TrTInawWQsH/spijTjFq1JYIWD2+WYgPMWiDJ0rtqS+n6ceNdn/Iy1WjfRsaNobr1gzZhpQMyKQ1rLkYGNzQzNFS5uomv3+vjsy7kExD2TvXgC50hEabXk19fK1CGwjH5xhxUkj1I8VfaPzFFrxFUOf9zIio4iIxeSPBnqWbOVyIwtZBAQLrcLMwxeD22/fJxdvAEgCU7LrcBRRBNsblLhkLutpfb5gibWsAGAj4b56YwvpeJpbHE523cX5iLQDWQCeE2mXvVCDgPBmwKtZaAJjCuBta2U9M1DlDBvUSscUhBy2bfm/oA2CIsqOvXQGMbtJGgasHGg02+vTFe+AnoqfYMXT5/OYAAAAASUVORK5CYII="/></a>
+                <a href="https://m.facebook.com/VeronicaMujerEnElEspectro?mibextid=LQQJ4d&wtsid=rdr_0LO7PP6LmpBogbKWb" target="_blank">
+                <img class="redes" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAuRJREFUaEPtmfFRFTEQh3+vAqQCoAK1AqUCpQK0ArUCsAKhAqUCtQKlArUCtQOtQOabuWPu3SXZ3STvASM7wx/M3SX77W+z2eStdMdtdcf91z3ATSvYU4FHkp5IeippXxL/T+27pF+Svkq6lMT/zdYKgKOvJD0fnI44BMwnSecDWOTb63drAR5IeifpRdWsy48+SHoj6U90vBoAov1eEhA9DedfDqq4x40C4HivqOecRA1AXOYFINo4T/S3YawNIMyU8gJ83KLzY4CAOLKi5QHomTa/JxWHkmsZFep16SULgJQh+i1GzT8rLE5K8c/CBKiAGkkrAZD3DNxSbchjFqVl/wovsA4OcuuhBMDEx9bMhede5xmiBMDzbCrlACxZLS7ShpbCaxYA46ACu/ea5QDIWVqEWotE36NAVoUcALmPCrW2W6jhpCWbIc1eZH0RfVQwFWDgb7WeD9/lAoPjlOVaezzvYlMTnUo6qZ3BAKCV9tT/3PQ0fKT3taUAqLnPbinA53lHkAIgfeaHkShPLoVaFeAQRBoVFfCUNAtoUwDMuzZ2aqL/CiC6YaWUo1njdOc1UwHy7KFztB4Akar3Y74+UykUWWg9AJrmay2jPQAiu76rjEZysgdApGi4NrJIJ8p6SZ2YAEsZ+8vO5AFzec4L4yeLjjRXr2mc9pwLOfXaJvYBjqOLBjM3UaQybAvgrST8WrMcAG0uKkzljgjSW4G/Q/QX1yylI2WLCr0BktFf9BWzELeo0BMgG30LgOeca79Ecmd4tyfA4XAln3TDuhfio5rzcS+A5outkTp6xdID4MJzkexRoAaiFcDlvGcNzPPOm04tAGbaTJ2KKDB+x8ImpUo7dQ0AOy23FnSnbqsBYHBKLGpw+Zva7CIAlEkuEuipzN8DvDuxNwKAMDGRmyriASDiKEkgwo6PDtYqkAKk0yS9+Mv9ksPujrOkya34mdWr1Mbe66nAxpwsDXwPcCNhn0x6Bda3jjHAE0AqAAAAAElFTkSuQmCC"/></a>
+                <a href="https://www.tiktok.com/@mujerenelespectro?_t=8cb5Tk5ACO6&_r=1" target="_blank">
+                <img class="redes" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAnRJREFUaEPtmf0xBEEQxZ8IyAARIAJkIAMyQASIABkQASJABIgAESAD9SuzVVt7O9M9N3t2rmqn6v64up6efv16+mNuRUu+Vpbcfk0AxmbwPxjYk/QYAfosid/nXhMAh+tSDLC9yIlFmx3GI2IB2Jf05NQ1I1YDgFtJR8sMANvnZqEGBgDwIWlH0ncuE7UAwG6Mh4nXHBA1AWjsvpF07QVSI4AGCGF1H5jhovO9yizkiZjoJa+ZgTawCYCH5phMqhJ/htjeNQ5YOAMbktaDET+dDOLpRpE5lxQDMjiANUnHoc/ptsPdFtkDoCEA2RNJ6G+DGQwAii+N3qUEQDeSYJYPxa23Sudkoe0wmAAitYYEYN49LwCv8RxYHQA8/h7i0vRIjQDIDmcey4NMVQxwgV4c3sfo5qLBGJmknVlGG+rpDA8T3qfJwthUH5+TRjOI/hO1LvFXwvveUXA0AGQewqdv0QLwu2eCGg0AoUHR6lunkq6cfI8GgKeO7N6kB1SVADZjE1JNAFL5P+cZJBWKF6ELdUbjrFgqC6UAeDMQJ6ZS8UIBHEi6S7iGdxzrCYRCSBsSWzlM9uqw6gBpcjVyuvWOQ0WmApNuYyvnLs0FgFTJ4BJbgCDGH1o1Aa9TvZvBJLY3JwyjBlgMNMNEjIW2YsIJr7PHszwhaOqxAKDAugvmIT0Cxf/MNDo9AJC1QikHxFuYpT1tiKnXC8BKh+ZBQWBQ49GZAwD53OGmDYycD5ODeD43hNqG0NtgyJbT7WQoMlLv46xTx9xZKKWfy918ulmKUKEC87q8EMNLGIiBomBZlbnU4TP7c+/A4AaUKpwAlHqwdP8vwu2SMVfYenAAAAAASUVORK5CYII="/></a>
+         
+            </div>
+    </footer>
+    
+
+    <script src="/script.js"></script>
+
+</body>
+</html>
