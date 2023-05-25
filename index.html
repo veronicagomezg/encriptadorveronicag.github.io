@@ -66,6 +66,12 @@
         const textArea = document.querySelector(".text-area");
         const mensaje = document.querySelector(".mensaje");
         const btnCopiar = document.querySelector(".btn-copiar");
+        btnCopiar.addEventListener('click', () => {
+ 
+            mensajeTextarea.select();
+            mensajeTextarea.setSelectionRange(0, 99999); 
+            document.execCommand('copy');
+        });
     </script>
 
 </body>
