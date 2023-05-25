@@ -269,9 +269,7 @@ main{
     background: linear-gradient(32deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
   }
 
-.footer {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color:whitesmoke;
+  footer {
     font-weight: bold;
     text-align: center;
     font-size: 12px;
