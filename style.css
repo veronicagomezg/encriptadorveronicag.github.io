@@ -107,14 +107,14 @@ main {
 
 .btn-desencriptar { 
         text-decoration: none;
-        margin-left: 30px;
+        margin-left: 70px;
         cursor: pointer;
         position: relative;
         border: none;
-        font-size: 14px;
+        font-size: 12px;
         font-family: inherit;
         color: #fff;
-        width: 9em;
+        width: 7em;
         height: 3em;
         line-height: 2em;
         text-align: center;
@@ -167,10 +167,10 @@ main {
         cursor: pointer;
         position: relative;
         border: none;
-        font-size: 14px;
+        font-size: 12px;
         font-family: inherit;
         color: #fff;
-        width: 9em;
+        width: 7em;
         height: 3em;
         line-height: 2em;
         text-align: center;
@@ -219,16 +219,16 @@ main {
 
 .btn-copiar { 
 
-    margin-left: 100px;
+    margin-left: 120px;
     cursor: pointer;
     margin-top: 20px;
     text-decoration: none;
     position: relative;
     border: none;
-    font-size: 14px;
+    font-size: 12px;
     font-family: inherit;
     color: #fff;
-    width: 9em;
+    width: 7em;
     height: 3em;
     line-height: 2em;
     text-align: center;
