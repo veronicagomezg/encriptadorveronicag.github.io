@@ -2,14 +2,12 @@
   font-family: 'Inter';
   font-weight: 400;
   font-size: 14px;
-  vertical-align: baseline;
-  text-align: center;
 }
 
 .logo {
   height: 50px;
   padding-top: 10px;
-  text-align: center;
+  margin-left: 130px;
 }
 
 header {
@@ -69,7 +67,7 @@ body {
 main {
   display: flex;
   margin-bottom: 10px;
-  margin-left: 180px;
+
 }
 
 .text-area {
@@ -88,7 +86,7 @@ main {
 
 .mensaje {
     background: white;
-    background-image: url(/Imagenes/au.svg);
+    background-image: url(Imagenes/au.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -225,7 +223,7 @@ main {
 
 .btn-copiar { 
 
-    margin-left: 120px;
+    margin-left: 160px;
     cursor: pointer;
     margin-top: 20px;
     text-decoration: none;
@@ -285,7 +283,5 @@ main {
     font-weight: bold;
     font-size: 12px;
     margin-top: 50px;
-    text-align: center;
-    margin-right: 230px;
-}
+  }
 
