@@ -1,23 +1,32 @@
 *{
-font: "Inter";
-margin: 0;
-padding: 0;
-font-size: 100%;
-vertical-align: inherit;
-}
-
-header {
-    background-color: white;
-        height: 120px;
-    padding: 20px 0;
-    text-align: center;
-
+  font-family: 'Inter';
+  font-weight: 400;
+  font-size: 14px;
+  vertical-align: baseline;
+  text-align: center;
 }
 
 .logo {
-    height: 50px;
-    margin-bottom: 10px;
+  height: 50px;
+  padding-top: 10px;
+  text-align: center;
 }
+
+header {
+  display: flow-root;
+  justify-content: space-between;
+  padding-top: 1%;
+  padding-left: 4%;
+  padding-right: 20%;
+  padding-bottom: 1%;
+}
+
+.container {
+  padding-top: 1%;
+  margin-left: 8%;
+}
+
+
 
 .animate-charcter {
     text-transform: uppercase;
@@ -48,54 +57,53 @@ header {
  }
 
 body {
-    background-color: #935d8c;
-    background-image: url("/Imagenes/overlay.png"), -moz-linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
+  background: rgb(238,174,202);
+  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+  border-radius: 56px 56px 0px 0px;
+  display: block;
+  margin: 20px;
+  width: 100%;
+  overflow-y: auto;
 }
 
 main {
-    display: flex;
-    margin-bottom: 30px;
-    margin-left: 10px;
+  display: flex;
+  margin-bottom: 10px;
+  margin-left: 180px;
 }
 
 .text-area {
-    border-radius: 24px;
+    height: 400px;
+    border: none;
     color: purple;
-    width: 450px;
-    height: 290px;
-    font-size: 16px;
-    margin-left: 20px;
+    margin-top: 20px;
     padding: 10px;
     text-transform: lowercase;
-    font: "Inter";
-    margin-top: 30px;
-    margin-left: 30px;
+    border-radius: 15px;
 }
 ::placeholder { color: purple; }
     .text-area:focus {
         outline: none;
     }
 
-.mensaje-caja {
-    display: flex;
-}
-
 .mensaje {
     background: white;
     background-image: url(/Imagenes/au.svg);
     background-repeat: no-repeat;
-    border-radius: 24px;
+    background-position: center;
+    background-size: contain;
+    border-radius: 15px;
+    border: none;
     color: purple;
-    margin-top: 30px;
-    padding: 10px;
-    width: 450px;
-    height: 290px;
-    margin-left: 100px;
-    font: "Inter";
+    margin-left: 98px;
+    margin-top: 20px;
+    padding-left: 20px;
+    height: 420px;
+
 }
 
 .mensaje:focus {
-    outline: none;
+  outline: none;
 }
 
 .botones {
@@ -104,9 +112,9 @@ main {
 }
 
 .btn-desencriptar { 
-
-    margin-left: 80px;
         text-decoration: none;
+        margin-left: 30px;
+        cursor: pointer;
         position: relative;
         border: none;
         font-size: 14px;
@@ -161,8 +169,8 @@ main {
 
 .btn-encriptar { 
 
-        margin-left: 90px;
         text-decoration: none;
+        cursor: pointer;
         position: relative;
         border: none;
         font-size: 14px;
@@ -217,7 +225,9 @@ main {
 
 .btn-copiar { 
 
-    margin-left: 375px;
+    margin-left: 120px;
+    cursor: pointer;
+    margin-top: 20px;
     text-decoration: none;
     position: relative;
     border: none;
@@ -273,8 +283,9 @@ main {
 
   footer {
     font-weight: bold;
-    text-align: center;
     font-size: 12px;
-    margin-bottom: 30px;
+    margin-top: 50px;
+    text-align: center;
+    margin-right: 230px;
 }
 

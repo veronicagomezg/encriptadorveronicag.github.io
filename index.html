@@ -1,46 +1,39 @@
 <!DOCTYPE html>
 
-<html lang="es">
-
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
         <title>Encriptador de texto - Alura Challenges ONE</title>
         <link rel="stylesheet" href="style.css">
-        
     </head>
-
-    <body class="encriptadorAlura">
-
+    <body>
         <header>
-            <img class="logo" src="Imagenes/Neurodiversity_Symbol.svg">
-            <div class="container">
+                <img class= "logo" src="Imagenes/Neurodiversity_Symbol.svg">
                 <div class="row">
                   <div class="col-md-12 text-center">
                     <h1 class="animate-charcter"> Encriptador de texto <br>Alura Challenge ONE</h1>
                   </div>
-                </div>
-              </div>
         </header>
-
-    <main>
-        <section class="introducir">
-            <textarea class="text-area" cols="30" rows="10" placeholder="Ingrese el texto aqui"></textarea>
-            <textarea class="mensaje"></textarea>
+        <main>
+            <section>
+                <textarea class="text-area" cols="30" rows="10" placeholder="Ingrese el texto aqui"></textarea>
             <div class="botones">
                 <button class="btn-encriptar" onclick="btnEncriptar()">Encriptar</button>
                 <button class="btn-desencriptar" onclick="btnDesencriptar()">Desencriptar</button>
-                <button class="btn-copiar">Copiar</button>
+            </div>
+        </section>
+        <section>
+                <textarea class="mensaje" cols="30" rows="10"></textarea>
+            <div>
+                <button class="btn-copiar" onclick="copiar()">Copiar</button>
             </div>
         </section>
     </main>
-    <footer class="footer">
-            <div class="laboral">
+    <footer>
+            <div>
             <p>
             ©Verónica Gómez González - Alura Grupo 5 - 2023
         </p>
@@ -49,7 +42,7 @@
                 <a href="https://www.linkedin.com/in/veronicaygomezg" target="_blank">
                 <img class="redes" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAeRJREFUaEPtmLsuRUEUhr/zBLQSCToShUaNN8ALuDUShUtxlGgpXCLRuDwCngANLVGoJBQSJS+ALJmTTMaeWXsnJ3vmxEwjObPmzP+vf61/zdGgw1ejw/GTCcRW8F8oMACMAl/AHfAWO+v2/ZoCh8CSA3gHaKZCIkTgCFj0AN0G1lMg4SMwCDwpAHuA99gkfATmgFMF3BRwkSqBeeBEATcNnKdKYBh4VMD1puBIoSYWBUSJorULrMXOvtyv2egxsOAAPQCWUwBfhoDEDJlB9g3cAs+pgC9LICW8f7BoJZQ0eE2BEaDLw+ATuHf2+oG+kvESOwOMA93Ahzknf2W2XFqfBZMYUuAaGPOcvjGX29ubwIYSL2DPgElFWiEi37evlUCdBGaBK0CyX3YJgZVQcJ0EpBylLKuu4JOlLgJVQdvxL4D8JilcnUBAgE8A0pOVbLSdTexe/GBcJuRc9pkt09TRCQhwcSApi9YSKxXr9Fm2xBW53u/5Okvo1TRxy/PtbAoJcSjfSoLAKrAXACmq+AahN9l1KuBtREMq1HNJENDeXaFJngm4pVv1LaQZhuxnBdwst3uQ5R6I/ZTICmQFrAxkGy0ohzwH8hwI/FslylMi8HRPZ0sbLukg9SDJBGJLlBWIrcAPVkCPMQi99zgAAAAASUVORK5CYII="/></a>
             
-            <div class="autismo">
+            <div>
             <p>Información sobre autismo en primera persona</p> 
                 <a href="https://www.instagram.com/mujerenelespectro" target="_blank">
                 <img class="redes" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAA1JJREFUaEPtmb+uT0EQx7/3CRAPwH0ClCrUCrQiQS9BNKrr3ih0/sQDoJDo8AToNIInQEN5SfTkIzsy1tl/5x8nOZuc3HtydmfnO/Od2Zn9bWjhY2Ph+msF8K89uHpgiR44KOmYpNOS9krinafP+CiJ56ukZ5JehfdqWS0UQtkbkq5US+838a6knQCqKKEWANa+M8DSRUWiCXjkYvBKdm0NAJR/Gkn5FITj/net2kXzD0viOS7pQPTtTAlECQC0eess/y1w/+VApVPLtwNN7Tue2MzRqQQAPl4O0lCeYEXolANvYDQb93JxlwOAsh+coBOSxrb8fkkXJJ2U9CYE73dJsSfwAnT9a+QAkG0IXMb7wNOxLX9J0n0n9Laka+EdT+8J/1+VBBuaAJCXT4UVWTdmUEEHRirQb0m67ta/lnQ0vPv9n4fYawIAXTiwGMVsEOYR9MQMGYXHD+TxYAyLo7OSHrtJW5JuhndPIw64WN6vaTkKwX87YWv4zwYPKs4KuEyOt3g6J+mQpM+Snkj6EgB4CrOGOGjywA83uwQgDroMq35/4rRlXWpgkBfuY6excx6oBRBvxJ6PJD103CcWyDbnI21zhhkVwJFEILYedChFcFp2gRrI7jpbRgWQ8lRMnRLVcECsWIpKswDwmQraQJOaAb2MTqkMMwuA2jiJQdUoVzMnm0a9cl0UimuWfQ11ErGz61B1lQorgJIHMOCiKQSAxQRxKj0uJo2mABCMVJrWCnIgUfil+gYCk/aUdQxaU5LB5AdZy5GPYuR5HvoIBsUaZ0R8TrTInawWQsH/spijTjFq1JYIWD2+WYgPMWiDJ0rtqS+n6ceNdn/Iy1WjfRsaNobr1gzZhpQMyKQ1rLkYGNzQzNFS5uomv3+vjsy7kExD2TvXgC50hEabXk19fK1CGwjH5xhxUkj1I8VfaPzFFrxFUOf9zIio4iIxeSPBnqWbOVyIwtZBAQLrcLMwxeD22/fJxdvAEgCU7LrcBRRBNsblLhkLutpfb5gibWsAGAj4b56YwvpeJpbHE523cX5iLQDWQCeE2mXvVCDgPBmwKtZaAJjCuBta2U9M1DlDBvUSscUhBy2bfm/oA2CIsqOvXQGMbtJGgasHGg02+vTFe+AnoqfYMXT5/OYAAAAASUVORK5CYII="/></a>
@@ -60,8 +53,6 @@
          
             </div>
     </footer>
-    
-
     <script src="script.js">
         const textArea = document.querySelector(".text-area");
         const mensaje = document.querySelector(".mensaje");
